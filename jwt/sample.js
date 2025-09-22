@@ -1,18 +1,23 @@
 const jwt=require('jsonwebtoken');
-const secretKey='mySecret';
+const secretKey='your-secret-key';
 
 const sampleUser={
-    id:'1',
-    name:'Student', 
+    id:'12345',
+    username:'Kiran',
+    role:'user',
 }
 
 function generateJWT(user){
     const payload={
         userId:user.id,
-        username:user.name,
+        username:user.username,
+        role:user.role,
+    };
+    const options={
+        expiresIn:'1h',
     };
     
-    const token=jwt.sign(payload,secretKey);
+    const token=jwt.sign(payload,secretKey,options);
     return token;
 }
 function verifyJWT(token){

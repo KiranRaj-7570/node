@@ -1,0 +1,15 @@
+PS C:\Users\kiran\Desktop\node\test\Sec-D> node
+Welcome to Node.js v22.18.0.
+Type ".help" for more information.
+> let x=5
+undefined
+> x*10
+50
+> .help
+.break    Sometimes you get stuck, this gets you out
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commanas in this REPL session to a file
