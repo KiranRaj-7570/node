@@ -1,0 +1,31 @@
+const http = require("node:http");
+const fs = require("node:fs");
+
+
+// const server = http.createServer((req, res)=>{
+//     res.writeHead(200, {
+//         "content-type" : "text/plain"
+//     })
+//     res.end("Hello world!")
+// })
+
+
+// const server = http.createServer((req, res)=>{
+//     res.writeHead(200, {
+//         "content-type" : "text/html"
+//     })
+//     const file = fs.readFileSync("./index.html","utf-8")
+//     res.end(file)
+// })
+
+
+const server = http.createServer((req, res)=>{
+    res.writeHead(200, {
+        "content-type" : "text/html"
+    })
+    fs.createReadStream("./index.html").pipe(res)
+})
+
+server.listen(3000, ()=>{
+    console.log("Server is listening on port 3000");
+})

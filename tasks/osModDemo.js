@@ -7,4 +7,3 @@ console.log("Host Name :" + os.hostname());
 console.log("platform Name :" + os.platform());
 console.log("System Uptime :" + (os.uptime()/3600).toFixed(2)+"h");
 console.log("OS release :" + os.release());
-// console.log("cpu info :" + JSON.stringify(os.cpus(),null,2));
